@@ -1,0 +1,14 @@
+<div class="accordion" id="postsAccordion">
+  <div *ngFor="let post of posts" class="accordion-item">
+    <h2 class="accordion-header" id="heading{{ post._id }}">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"  aria-expanded="true" >
+        {{ post.titre }}
+      </button>
+    </h2>
+    <div id="collapse{{ post._id }}" class="accordion-collapse collapse"  data-bs-parent="#postsAccordion">
+      <div class="accordion-body">
+        {{ post.contenu }}
+      </div>
+    </div>
+  </div>
+</div>
